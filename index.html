@@ -61,8 +61,8 @@
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0,0,0,0.06);
   }
-  .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--text-dark); text-decoration: none; }
-  .nav-logo span { color: var(--purple); }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-logo-img { height: 36px; width: auto; object-fit: contain; }
   .nav-links { display: flex; gap: 44px; list-style: none; align-items: center; }
   .nav-links a {
     font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 400;
@@ -282,6 +282,7 @@
     .cursor, .cursor-ring { display: none !important; }
     body { cursor: auto; }
     nav { padding: 20px 24px; }
+    .nav-logo-img { height: 30px; }
     .nav-links { position: fixed; inset: 0; background: white; flex-direction: column; justify-content: center; transform: translateX(100%); transition: transform 0.3s; display: flex; }
     .nav-links.active { transform: translateX(0); }
     .mobile-menu-btn { display: block; }
@@ -304,7 +305,7 @@
 <div class="cursor-ring" id="cring"></div>
 
 <nav id="nav">
-  <a href="#" class="nav-logo">Shezign <span>Studio</span></a>
+  <a href="#" class="nav-logo"><img src="logo.png" alt="Shezign Studio" class="nav-logo-img"></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#work">Work</a></li>
     <li><a href="#about">About</a></li>
